@@ -1,4 +1,21 @@
 
+if &compatible
+  set nocompatible
+endif
+set runtimepath+=~/.vim/dein/dein.vim
+if dein#load_state('~/.vim/dein/dein.vim')
+  call dein#begin('~/.vim/dein/dein.vim')
+
+  call dein#add('~/.vim/dein/dein.vim')
+  call dein#add('Shougo/neocomplete.vim')
+  
+  call dein#end()
+  call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
+
 set nonumber "行番号を表示しない
 set cursorline "カーソル行の背景色を変える
 "set cursorcolumn "カーソル位置のカラムの背景色を変える
@@ -28,7 +45,7 @@ inoremap <c-h> <left>
 inoremap <c-l> <right>
 inoremap <c-e> <c-o>$
 inoremap <c-a> <c-o>^
-syntax on
+
 colorscheme molokai
 set t_Co=256
 set encoding=utf-8
